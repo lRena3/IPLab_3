@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 3</title>
+</head>
+<script>
+    const products = [
+        { name: "Телефон", price:10000, category: "Електроніка" },
+        { name: "Навушники", price:2500, category: "Електроніка" },
+        { name: "Футболка", price:600, category: "Одяг" },
+        { name: "Красовки", price:2100, category: "Одяг" },
+        { name: "Помада", price:200, category: "Косметика" },
+    ];
+    
+    console.log(products);
+
+    products.push({ name: "Худі", price: 1800, category: "Одяг"});
+    
+    const removedProduct = products.pop();
+
+    const electronics = products.filter(product => product.category === "Електроніка");
+    console.log(electronics);
+
+    const productNames = products.map(product => product.name);
+    console.log(productNames);
+
+    const totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+    console.log("Загальна вартість:", totalPrice);
+</script>
+<body>
+    
+</body>
+</html>

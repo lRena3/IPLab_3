@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 3</title>
+</head>
+<script>
+    const users = [
+        { name: "Ірина", age: 20, email: "iryna@gmail.com", hobbits: ["читання", "туризм"] },
+        { name: "Артем", age: 16, email: "artem@gmail.com", hobbits: ["відеоігри", "футбол"] },
+        { name: "Вадим", age: 22, email: "vadym@gmail.com", hobbits: ["музика", "читання"] },
+        { name: "Анна", age: 17, email: "anna@gmail.com", hobbits: ["танці", "в'язання"] }
+    ];
+    
+    processUsers(users);
+    console.log(getAdultUsers(users));
+
+    function processUsers(userList) {
+        console.log("Отримано користувачів:", userList.length);
+    }
+
+    function getAdultUsers(userList) {
+        const adults = userList.filter(user => user.age >= 18);
+        return adults;
+    }
+
+    function printAdultNames(userList) {
+        userList
+        .filter(user => user.age >= 18)
+        .forEach(user => console.log(user.name));
+    }
+
+    printAdultNames(users);
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 3</title>
+</head>
+<script>
+    const user = {
+        name: "Олена",
+        age: 22,
+        email: "olenaromaniuk1216@gmail.com",
+        hobbies: ["програмування", "малювання", "спати"]
+    };
+    console.log(user);    //Виведення у консоль усі властивості об’єкта.
+    user.isAdmin = false; //Додавання нової властивісті.
+    user.age = 23;        //Змінено вік користувача
+    delete user.email;    //Видалення властивісті.
+    
+    for (const key in user) {
+        console.log(`${key}: ${user[key]}`);
+    }
+</script>
+<body>
+    
+</body>
+</html>
